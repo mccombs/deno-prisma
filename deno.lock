@@ -1,12 +1,18 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/dotenv@*": "0.225.2",
     "npm:@prisma/client@^6.3.0": "6.3.0_prisma@6.3.0",
     "npm:@prisma/extension-accelerate@^1.2.1": "1.2.1_@prisma+client@6.3.0__prisma@6.3.0_prisma@6.3.0",
     "npm:dotenv-cli@*": "6.0.0",
     "npm:dotenv-cli@6": "6.0.0",
     "npm:prisma@^6.3.0": "6.3.0",
     "npm:prisma@latest": "6.3.0"
+  },
+  "jsr": {
+    "@std/dotenv@0.225.2": {
+      "integrity": "e2025dce4de6c7bca21dece8baddd4262b09d5187217e231b033e088e0c4dd23"
+    }
   },
   "npm": {
     "@prisma/client@6.3.0_prisma@6.3.0": {
