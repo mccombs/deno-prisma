@@ -1,4 +1,6 @@
 import { PrismaClient } from "./generated/client/deno/edge.ts";
+import { withAccelerate } from '@prisma/extension-accelerate'
+
 import { Application, Router } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 import { config } from "https://deno.land/std@0.163.0/dotenv/mod.ts";
 
@@ -14,7 +16,7 @@ const prisma = new PrismaClient({
             url: envVars.DATABASE_URL,
         },
     },
-});
+}).$extends(withAccelerate());
 const app = new Application();
 const router = new Router();
 
@@ -28,7 +30,9 @@ router
     })
     .get("/dinosaur", async (context) => {
         // Get all dinosaurs.
-        const dinosaurs = await prisma.dinosaur.findMany();
+        const dinosaurs = await prisma.dinosaur.findMany(
+            { cacheStrategy: { ttl: 60 } }
+        );
         context.response.body = dinosaurs;
     })
     .get("/dinosaur/:id", async (context) => {

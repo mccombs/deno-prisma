@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "npm:@prisma/client@^6.3.0": "6.3.0_prisma@6.3.0",
+    "npm:@prisma/extension-accelerate@^1.2.1": "1.2.1_@prisma+client@6.3.0__prisma@6.3.0_prisma@6.3.0",
     "npm:dotenv-cli@*": "6.0.0",
     "npm:dotenv-cli@6": "6.0.0",
     "npm:prisma@^6.3.0": "6.3.0",
@@ -27,6 +28,12 @@
         "@prisma/engines-version",
         "@prisma/fetch-engine",
         "@prisma/get-platform"
+      ]
+    },
+    "@prisma/extension-accelerate@1.2.1_@prisma+client@6.3.0__prisma@6.3.0_prisma@6.3.0": {
+      "integrity": "sha512-QicnMeyqL226ilT3vvRsFAqPeIdqHGKR4c25CoK5zZ1tNIv8egfgpD1gCKqOGmfAz0pIKQnMuJU3eNg9KItC7A==",
+      "dependencies": [
+        "@prisma/client"
       ]
     },
     "@prisma/fetch-engine@6.3.0": {
@@ -176,6 +183,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@prisma/client@^6.3.0",
+        "npm:@prisma/extension-accelerate@^1.2.1",
         "npm:dotenv-cli@6",
         "npm:prisma@^6.3.0"
       ]
