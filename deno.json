@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "migrate": "deno run -A --unstable npm:prisma migrate dev --name init",
+    "dev": "deno run -A --unstable main.ts",
+    "push": "deno run -A --allow-scripts  npm:prisma@latest db push",
+    "gen": "deno run -A --allow-scripts  npm:prisma@latest generate"
+  },
+  "nodeModulesDir": "auto"
+}
